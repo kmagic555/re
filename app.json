@@ -16,16 +16,16 @@
 			"generator": "Object3D.toJSON"
 		},
 		"object": {
-			"uuid": "056199EB-6985-481B-97CC-A57FB7C87809",
+			"uuid": "60EBAF60-53DA-47B0-A028-8FC031B708F6",
 			"type": "PerspectiveCamera",
 			"name": "Camera",
 			"layers": 1,
-			"matrix": [0.9999875000260416,-2.168404344971009e-19,-0.00499997916669271,0,-0.002236058660561531,0.8944271909999157,-0.4472080053416605,0,0.00447211732112306,0.4472135954999581,0.8944160106833207,0,0.024031185586005716,2.4031285716237702,4.806197065158413,1],
+			"matrix": [-0.14642520209784396,-6.938896828407531e-18,0.9892221707587258,0,0.11329496691264027,0.9934198200571751,0.01676998243390366,0,-0.9827126262733379,0.1145294080041472,-0.14546165579347153,0,-6.291208731335316,0.7332035758640424,-0.9312281276701943,1],
 			"up": [0,1,0],
 			"fov": 50,
 			"zoom": 1,
-			"near": 0.001,
-			"far": 10000000000,
+			"near": 0.1,
+			"far": 100000,
 			"focus": 10,
 			"aspect": 1.8712753277711562,
 			"filmGauge": 35,
@@ -43,7 +43,15 @@
 		},
 		"geometries": [
 			{
-				"uuid": "b5760fd2-0cec-493f-ae6b-a692d00b5a56",
+				"uuid": "6D90C4BE-EBA6-4E21-8F54-7CFDAA61F30B",
+				"type": "PlaneGeometry",
+				"width": 10,
+				"height": 10,
+				"widthSegments": 1,
+				"heightSegments": 1
+			},
+			{
+				"uuid": "D3008B2A-ACDD-43CC-87F7-4F942607D21A",
 				"type": "BoxGeometry",
 				"width": 1,
 				"height": 1,
@@ -51,18 +59,80 @@
 				"widthSegments": 1,
 				"heightSegments": 1,
 				"depthSegments": 1
+			},
+			{
+				"uuid": "F482ACD4-013A-49CF-AE0F-C9FF4ADAE409",
+				"type": "CylinderGeometry",
+				"radiusTop": 0,
+				"radiusBottom": 0.4,
+				"height": 0.75,
+				"radialSegments": 4,
+				"heightSegments": 1,
+				"openEnded": false,
+				"thetaStart": 0,
+				"thetaLength": 6.283185307179586
+			},
+			{
+				"uuid": "51CDDCED-BC71-4B1B-A485-725B6A48204B",
+				"type": "IcosahedronGeometry",
+				"radius": 0.4,
+				"detail": 2
 			}],
 		"materials": [
 			{
-				"uuid": "64f7d5fa-d13b-4e8d-8ada-34e0ad1cc128",
-				"type": "MeshStandardMaterial",
-				"color": 3397481,
-				"roughness": 1,
-				"metalness": 0,
+				"uuid": "4AE8130E-B6A8-47BC-ACCF-060973C74044",
+				"type": "MeshPhongMaterial",
+				"color": 16777215,
 				"emissive": 0,
+				"specular": 1118481,
+				"shininess": 30,
 				"envMapRotation": [0,0,0,
 					"XYZ"],
 				"envMapIntensity": 1,
+				"reflectivity": 1,
+				"refractionRatio": 0.98,
+				"blendColor": 0
+			},
+			{
+				"uuid": "B5943856-E404-45D9-A427-4774202C2CD0",
+				"type": "MeshPhongMaterial",
+				"color": 37119,
+				"emissive": 0,
+				"specular": 1118481,
+				"shininess": 30,
+				"envMapRotation": [0,0,0,
+					"XYZ"],
+				"envMapIntensity": 1,
+				"reflectivity": 1,
+				"refractionRatio": 0.98,
+				"blendColor": 0
+			},
+			{
+				"uuid": "3F872310-2067-4BE4-9250-5B3F4E43797E",
+				"type": "MeshPhongMaterial",
+				"color": 15859456,
+				"emissive": 0,
+				"specular": 1118481,
+				"shininess": 30,
+				"envMapRotation": [0,0,0,
+					"XYZ"],
+				"envMapIntensity": 1,
+				"reflectivity": 1,
+				"refractionRatio": 0.98,
+				"blendColor": 0
+			},
+			{
+				"uuid": "E1826901-7922-4584-A25D-6D487E2C9BBD",
+				"type": "MeshPhongMaterial",
+				"color": 16711680,
+				"emissive": 0,
+				"specular": 1118481,
+				"shininess": 30,
+				"envMapRotation": [0,0,0,
+					"XYZ"],
+				"envMapIntensity": 1,
+				"reflectivity": 1,
+				"refractionRatio": 0.98,
 				"blendColor": 0
 			}],
 		"object": {
@@ -72,50 +142,128 @@
 			"layers": 1,
 			"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
 			"up": [0,1,0],
+			"background": 11184810,
 			"children": [
 				{
-					"uuid": "a56b5863-5bee-48b1-a202-339d298636b7",
+					"uuid": "B7CBBC6F-EC26-49B5-8D0D-67D9C535924B",
+					"type": "Group",
+					"name": "Dummy",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,1,4,1],
+					"up": [0,1,0],
+					"children": [
+						{
+							"uuid": "60B69C58-4201-43FD-815E-AD2EDFBBD0CE",
+							"type": "PerspectiveCamera",
+							"name": "PerspectiveCamera",
+							"layers": 1,
+							"matrix": [-1,0,0,0,0,1,0,0,0,0,-1,0,0,0,0,1],
+							"up": [0,1,0],
+							"fov": 50,
+							"zoom": 1,
+							"near": 0.1,
+							"far": 100,
+							"focus": 10,
+							"aspect": 1.8712753277711562,
+							"filmGauge": 35,
+							"filmOffset": 0
+						}]
+				},
+				{
+					"uuid": "A460C230-DC88-4A8F-A3FB-AA0FE735F3ED",
+					"type": "Mesh",
+					"name": "Plane",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,0.04078499999999995,-0.9991680000000001,0,0,0.9991680000000001,0.04078499999999995,0,0,-0.5,0,1],
+					"up": [0,1,0],
+					"geometry": "6D90C4BE-EBA6-4E21-8F54-7CFDAA61F30B",
+					"material": "4AE8130E-B6A8-47BC-ACCF-060973C74044"
+				},
+				{
+					"uuid": "26DAAD69-725D-43B7-AF9D-990A99DEF8C5",
 					"type": "Mesh",
 					"name": "Box",
 					"layers": 1,
 					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
 					"up": [0,1,0],
-					"geometry": "b5760fd2-0cec-493f-ae6b-a692d00b5a56",
-					"material": "64f7d5fa-d13b-4e8d-8ada-34e0ad1cc128"
+					"geometry": "D3008B2A-ACDD-43CC-87F7-4F942607D21A",
+					"material": "B5943856-E404-45D9-A427-4774202C2CD0"
 				},
 				{
-					"uuid": "748ae10c-0fd6-4800-a5e3-7db9a01af6c0",
-					"type": "Object3D",
-					"name": "DirectionalLight Target",
+					"uuid": "AAAFF2D6-4725-4AFC-A9FE-26419B11011F",
+					"type": "Mesh",
+					"name": "Cylinder",
 					"layers": 1,
-					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
-					"up": [0,1,0]
-				},
-				{
-					"uuid": "bce8a5cc-0c7d-4b68-b1e1-74ee10ce6d04",
-					"type": "DirectionalLight",
-					"name": "DirectionalLight",
-					"layers": 1,
-					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,5,10,7.5,1],
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-1.3,-0.15,0,1],
 					"up": [0,1,0],
-					"color": 16777215,
-					"intensity": 1,
+					"geometry": "F482ACD4-013A-49CF-AE0F-C9FF4ADAE409",
+					"material": "3F872310-2067-4BE4-9250-5B3F4E43797E"
+				},
+				{
+					"uuid": "B855E267-A266-4098-ACD6-6A1FDE7B88BA",
+					"type": "Mesh",
+					"name": "Icosahedron",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,1.3,-0.1,0,1],
+					"up": [0,1,0],
+					"geometry": "51CDDCED-BC71-4B1B-A485-725B6A48204B",
+					"material": "E1826901-7922-4584-A25D-6D487E2C9BBD"
+				},
+				{
+					"uuid": "E2939A7B-5E40-438A-8C1B-32126FBC6892",
+					"type": "PointLight",
+					"name": "PointLight 1",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-0.939,1.271,-1.143,1],
+					"up": [0,1,0],
+					"color": 9474221,
+					"intensity": 0.75,
+					"distance": 0,
+					"decay": 1,
 					"shadow": {
 						"camera": {
-							"uuid": "2128a132-6248-40b6-84cb-7c00a7d48913",
-							"type": "OrthographicCamera",
+							"uuid": "EFF42F46-1E27-4B36-B9D9-CF7D879D258E",
+							"type": "PerspectiveCamera",
 							"layers": 1,
 							"up": [0,1,0],
+							"fov": 90,
 							"zoom": 1,
-							"left": -5,
-							"right": 5,
-							"top": 5,
-							"bottom": -5,
 							"near": 0.5,
-							"far": 500
+							"far": 500,
+							"focus": 10,
+							"aspect": 1,
+							"filmGauge": 35,
+							"filmOffset": 0
 						}
-					},
-					"target": "748ae10c-0fd6-4800-a5e3-7db9a01af6c0"
+					}
+				},
+				{
+					"uuid": "3412781E-27CC-43C3-A5DB-54C0C8E42ED6",
+					"type": "PointLight",
+					"name": "PointLight 2",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0.881,0.083,1.254,1],
+					"up": [0,1,0],
+					"color": 12773063,
+					"intensity": 1,
+					"distance": 0,
+					"decay": 1,
+					"shadow": {
+						"camera": {
+							"uuid": "81E800FE-E8A7-4A9E-AFAA-4F04FD56AFE4",
+							"type": "PerspectiveCamera",
+							"layers": 1,
+							"up": [0,1,0],
+							"fov": 90,
+							"zoom": 1,
+							"near": 0.5,
+							"far": 500,
+							"focus": 10,
+							"aspect": 1,
+							"filmGauge": 35,
+							"filmOffset": 0
+						}
+					}
 				}],
 			"backgroundRotation": [0,0,0,
 				"XYZ"],
@@ -123,7 +271,18 @@
 				"XYZ"]
 		}
 	},
-	"scripts": {},
+	"scripts": {
+		"60B69C58-4201-43FD-815E-AD2EDFBBD0CE": [
+			{
+				"name": "Player Camera",
+				"source": "player.setCamera( this );"
+			}],
+		"B7CBBC6F-EC26-49B5-8D0D-67D9C535924B": [
+			{
+				"name": "Orbit",
+				"source": "function update( event ) {\n\n\tvar time = event.time * 0.001;\n\n\tthis.position.x = Math.sin( time ) * 4;\n\tthis.position.z = Math.cos( time ) * 4;\n\tthis.lookAt( scene.position );\n\n}"
+			}]
+	},
 	"backgroundType": "Default",
-	"environmentType": "None"
+	"environmentType": "Default"
 }
